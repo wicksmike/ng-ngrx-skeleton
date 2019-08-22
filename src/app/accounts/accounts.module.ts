@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AccountsRoutingModule } from './accounts-routing.module';
-import { AccountsContainerComponent } from './containers/accounts-container.component';
+import { AccountsLandingPageComponent } from './containers/accounts-landing-page/accounts-landing-page.component';
 
 
 @NgModule({
-  declarations: [AccountsContainerComponent],
+  declarations: [AccountsLandingPageComponent],
   imports: [
     CommonModule,
     AccountsRoutingModule
