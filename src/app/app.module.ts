@@ -10,8 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
@@ -24,14 +22,7 @@ import { reducers, metaReducers } from './reducers';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    })
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
