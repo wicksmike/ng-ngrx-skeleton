@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AccountsLandingPageComponent } from './accounts-landing-page.component';
 
 describe('AccountsLandingPageComponent', () => {
