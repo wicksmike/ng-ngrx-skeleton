@@ -8,7 +8,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
-
 @NgModule({
   declarations: [AccountsLandingPageComponent, AccountsListComponent],
   imports: [
@@ -19,4 +18,4 @@ import { MatSortModule } from '@angular/material/sort';
     MatSortModule
   ]
 })
-export class AccountsModule { }
+export class AccountsModule {}

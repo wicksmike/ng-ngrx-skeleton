@@ -12,12 +12,12 @@ describe('AccountsListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccountsListComponent ],
+      declarations: [AccountsListComponent],
       imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
-        MatTableModule,
+        MatTableModule
       ]
     }).compileComponents();
   }));
