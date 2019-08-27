@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { EntityDataModule } from '@ngrx/data';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
@@ -24,7 +26,8 @@ import { EntityDataModule } from '@ngrx/data';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    EntityDataModule
+    EntityDataModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
