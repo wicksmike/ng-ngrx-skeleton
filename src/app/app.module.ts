@@ -12,10 +12,6 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
-import { EffectsModule } from '@ngrx/effects';
-import { AppEffects } from './app.effects';
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
   imports: [
@@ -28,16 +24,7 @@ import { AppEffects } from './app.effects';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    StoreModule.forRoot(reducers, {
-      metaReducers, 
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true,
-      }
-    }),
-    !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([AppEffects])],
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })],
   providers: [],
   bootstrap: [AppComponent]
 })
