@@ -10,10 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { EntityDataModule } from '@ngrx/data';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
-
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
   imports: [
@@ -25,10 +21,7 @@ import { environment } from '../environments/environment';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule,
-    EntityDataModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
-  ],
+    MatListModule],
   providers: [],
   bootstrap: [AppComponent]
 })
