@@ -10,6 +10,5 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "none"
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
