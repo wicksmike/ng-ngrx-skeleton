@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UsersLandingPageComponent } from './users-landing-page.component';
 
 describe('UsersLandingPageComponent', () => {
@@ -8,9 +7,8 @@ describe('UsersLandingPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersLandingPageComponent ]
-    })
-    .compileComponents();
+      declarations: [UsersLandingPageComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

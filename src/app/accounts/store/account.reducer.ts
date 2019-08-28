@@ -3,21 +3,16 @@ import * as AccountActions from './account.actions';
 
 export const accountFeatureKey = 'account';
 
-export interface State {
+export interface State {}
 
-}
-
-export const initialState: State = {
-
-};
+export const initialState: State = {};
 
 const accountReducer = createReducer(
   initialState,
 
   on(AccountActions.loadAccounts, state => state),
   on(AccountActions.loadAccountsSuccess, (state, action) => state),
-  on(AccountActions.loadAccountsFailure, (state, action) => state),
-
+  on(AccountActions.loadAccountsFailure, (state, action) => state)
 );
 
 export function reducer(state: State | undefined, action: Action) {

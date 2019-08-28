@@ -10,9 +10,9 @@ import { UsersListDataSource, UsersListItem } from './users-list-datasource';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<UsersListItem>;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatTable, { static: false }) table: MatTable<UsersListItem>;
   dataSource: UsersListDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */

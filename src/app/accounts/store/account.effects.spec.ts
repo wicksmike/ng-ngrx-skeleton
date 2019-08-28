@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
-
 import { AccountEffects } from './account.effects';
 
 describe('AccountEffects', () => {
@@ -10,10 +9,7 @@ describe('AccountEffects', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        AccountEffects,
-        provideMockActions(() => actions$)
-      ]
+      providers: [AccountEffects, provideMockActions(() => actions$)]
     });
 
     effects = TestBed.get<AccountEffects>(AccountEffects);

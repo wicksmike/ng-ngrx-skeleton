@@ -1,8 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-export const loadAccounts = createAction(
-  '[Account] Load Accounts'
-);
+export const loadAccounts = createAction('[Account] Load Accounts');
 
 export const loadAccountsSuccess = createAction(
   '[Account] Load Accounts Success',

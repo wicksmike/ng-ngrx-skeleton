@@ -1,9 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { UsersListComponent } from './users-list.component';
 
 describe('UsersListComponent', () => {
@@ -12,12 +11,12 @@ describe('UsersListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersListComponent ],
+      declarations: [UsersListComponent],
       imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
-        MatTableModule,
+        MatTableModule
       ]
     }).compileComponents();
   }));
