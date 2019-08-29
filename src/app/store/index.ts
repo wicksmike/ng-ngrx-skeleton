@@ -1,15 +1,16 @@
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { environment } from '../../environments/environment';
-import * as fromAccount from '../accounts/store/account.reducer';
+import * as AccountReducer from '../features/accounts/store/account.reducer';
+import * as AccountState from '../features/accounts/store/account.state';
 
-export interface State {
-  [fromAccount.accountFeatureKey]: fromAccount.State;
+export interface AppState {
+  [AccountState.accountFeatureKey]: AccountState.State;
 }
 
-export const reducers: ActionReducerMap<State> = {
-  [fromAccount.accountFeatureKey]: fromAccount.reducer
+export const reducers: ActionReducerMap<AppState> = {
+  [AccountState.accountFeatureKey]: AccountReducer.reducer
 };
 
-export const metaReducers: MetaReducer<State>[] = !environment.production
+export const metaReducers: MetaReducer<AppState>[] = !environment.production
   ? []
   : [];

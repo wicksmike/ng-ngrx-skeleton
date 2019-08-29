@@ -9,7 +9,8 @@ import { AccountsRoutingModule } from './accounts-routing.module';
 import { AccountsListComponent } from './components/accounts-list/accounts-list.component';
 import { AccountsLandingPageComponent } from './containers/accounts-landing-page/accounts-landing-page.component';
 import { AccountEffects } from './store/account.effects';
-import * as fromAccount from './store/account.reducer';
+import * as AccountReducer from './store/account.reducer';
+import * as AccountState from './store/account.state';
 
 @NgModule({
   declarations: [AccountsLandingPageComponent, AccountsListComponent],
@@ -19,7 +20,10 @@ import * as fromAccount from './store/account.reducer';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    StoreModule.forFeature(fromAccount.accountFeatureKey, fromAccount.reducer),
+    StoreModule.forFeature(
+      AccountState.accountFeatureKey,
+      AccountReducer.reducer
+    ),
     EffectsModule.forFeature([AccountEffects])
   ]
 })
