@@ -20,7 +20,5 @@ export class AccountsLandingPageComponent implements OnInit {
 
   public ngOnInit() {
     this.store.dispatch(AccountActions.loadAccounts());
-
-    this.accounts$.subscribe(accounts => console.log(accounts));
   }
 }
