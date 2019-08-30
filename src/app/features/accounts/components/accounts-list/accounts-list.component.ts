@@ -9,10 +9,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { Account } from '../../store/account.model';
-import {
-  AccountsListDataSource,
-  AccountsListItem
-} from './accounts-list-datasource';
+import { AccountsListDataSource } from './accounts-list-datasource';
 
 @Component({
   selector: 'app-accounts-list',
@@ -24,7 +21,7 @@ export class AccountsListComponent implements AfterViewInit, OnInit {
 
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: false }) sort: MatSort;
-  @ViewChild(MatTable, { static: false }) table: MatTable<AccountsListItem>;
+  @ViewChild(MatTable, { static: false }) table: MatTable<Account>;
 
   public dataSource: AccountsListDataSource;
 
