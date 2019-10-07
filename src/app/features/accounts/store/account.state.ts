@@ -7,7 +7,8 @@ export const accountEntityAdapter: EntityAdapter<Account> = createEntityAdapter<
   Account
 >({
   selectId: model => model.id,
-  sortComparer: (a: Account, b: Account): number => a.name.localeCompare(b.name)
+  sortComparer: (a: Account, b: Account): number =>
+    a.firstName.localeCompare(b.firstName)
 });
 
 export interface State extends EntityState<Account> {

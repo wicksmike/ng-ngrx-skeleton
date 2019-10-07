@@ -1,4 +1,6 @@
 export interface Account {
-  id: number;
-  name: string;
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
 }
